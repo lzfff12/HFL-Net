@@ -1,6 +1,6 @@
         nohup\
         python traineval.py --HO3D_root /data1/zhifeng/ho3d_v2 \
-        --host_folder  /data1/zhifeng/cvpr/host_folder/check_dexycb \
+        --host_folder  host_folder/check_dexycb \
         --dex_ycb_root /data1/zhifeng/dex-ycb \
         --epochs 40 \
         --inp_res 256 \
