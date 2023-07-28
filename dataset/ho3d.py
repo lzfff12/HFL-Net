@@ -56,20 +56,7 @@ class HO3D(data.Dataset):
             #data_ho3d = []
             with open('ho3d_train_data.json', 'r') as f:
                  data_ho3d = json.load(f)
-            # training list
-            #self.set_list = ho3d_util.load_names(os.path.join(train_label_root, "train.txt"))
-            #self.set_list = data_ho3d['seqName_id']
-            # camera matrix
-           # K_list = ho3d_util.json_load(os.path.join(train_label_root, 'train_K.json'))
-            #K_list = data_ho3d['K']
-            # hand joints
-            #joints_list = ho3d_util.json_load(os.path.join(train_label_root, 'train_joint.json'))
-            #joints_list = data_ho3d['joints_3d']
-            # mano params
-           # mano_list = data_ho3d['mano_params']
-           # mano_list = ho3d_util.json_load(os.path.join(train_label_root, 'train_mano.json'))
-            # obj landmarks
-           # obj_p2d_list = ho3d_util.json_load(os.path.join(train_label_root, 'train_obj.json'))
+            
             for data in data_ho3d:
                 self.set_list.append(data['seqName_id'])
                 K = np.array(data['K'], dtype=np.float32)
@@ -77,22 +64,7 @@ class HO3D(data.Dataset):
                 self.joints_uv.append(ho3d_util.projectPoints(np.array(data['joints_3d'], dtype=np.float32), K))
                 self.mano_params.append(np.array(data['mano_params'], dtype=np.float32))
                 self.obj_p2ds.append(np.array(data['obj_p2ds'], dtype=np.float32))
-            #     data = {
-            #         'seqName_id':self.set_list[i],
-            #         'K':K.tolist(),
-            #         'joints_3d':np.matmul(self.coord_change_mat,np.array(joints_list[i], dtype=np.float32).T).T.tolist(),
-            #         'obj_p2ds':np.array(obj_p2d_list[i], dtype=np.float32).tolist(),
-            #         'mano_params':np.array(mano_list[i], dtype=np.float32).tolist(),
-            #     }
-            #     data_ho3d.append(data)
-
-            # import json
-            # print(data_ho3d)
-            # with open('ho3d_train_data.json', 'w') as fo:
-            #     json.dump(data_ho3d, fo)
-        
-            # print('Dumped %d ho3d data to %s' % (len(data_ho3d), 'ho3d_train_data.json'))
-            # exit()
+           
         else:
             self.set_list = ho3d_util.load_names(os.path.join(self.root, "evaluation.txt"))
 
