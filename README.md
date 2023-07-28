@@ -19,7 +19,25 @@ ${ROOT}
 |   |   |   |-- object_render
 |   |   |   |-- dex_ycb_s0_train_data.json
 |   |   |   |-- dex_ycb_s0_test_data.json
-``` 
+```
+### Train  
+#### HO3d
+```
+sh sh/train_ho3d.sh
+```
+#### Dex-ycb
+```
+sh sh/train_dex-ycb.sh
+```
+### Test  
+#### HO3d
+```
+sh sh/train_ho3d_test.sh
+```
+#### Dex-ycb
+```
+sh sh/train_dex-ycb_test.sh
+```  
 ### Data  
 You need to follow directory structure of the `data` as below.  
 
