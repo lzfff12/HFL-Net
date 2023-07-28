@@ -3,6 +3,7 @@
 ## Directory
 
 ### Data  
+You need to follow directory structure of the `data` as below.  
 
   
 ### Pytorch MANO layer
