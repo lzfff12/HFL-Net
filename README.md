@@ -1,7 +1,25 @@
 # Harmonious Feature Learning for Interactive Hand-Object Pose Estimation 
 
 ## Directory
-
+```  
+${ROOT}  
+|-- data  
+|   |-- HO3D
+|   |   |-- data
+|   |   |   |-- train
+|   |   |   |   |-- ABF10
+|   |   |   |   |-- ......
+|   |   |   |-- evaluation
+|   |   |   |-- train_segLable
+|   |   |   |-- ho3d_train_data.json
+|   |-- DEX_YCB
+|   |   |-- data
+|   |   |   |-- 20200709-subject-01
+|   |   |   |-- ......
+|   |   |   |-- object_render
+|   |   |   |-- dex_ycb_s0_train_data.json
+|   |   |   |-- dex_ycb_s0_test_data.json
+``` 
 ### Data  
 You need to follow directory structure of the `data` as below.  
 
