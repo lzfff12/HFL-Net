@@ -138,9 +138,7 @@ def get_dex_ycb_dataset(args,mode):
     return dataset
 
 def get_network(args):
-    #from utils.manolayer_ho3d import ManoLayer
-    #mano_layer = ManoLayer(ncomps=45, center_idx=0, flat_hand_mean=True,
-    #                       side="right", mano_root=args.mano_root, use_pca=False)
+   
     # change coordinates for HO3D dataset to OpenGL coordinates
     from manopth.manopth.manolayer import ManoLayer
     if args.use_ho3d:
